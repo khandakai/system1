@@ -1,0 +1,18 @@
+Инструкция по сборке:
+
+Для сборки программы необходимо ввести в терминал следующие команды:
+
+gcc main.c -o main
+
+gcc num_processing.c numwork.c -o num_processing -lm
+
+
+Для сборки тестов необходимо ввести следующую команду:
+
+gcc test_num_processing.c numwork.c -o test_num_processing -lcunit -lm
+
+Для сборки документации необходимо, чтобы в каталоге сборки был Doxyfile и все файлы программы необходимо ввести команду:
+
+doxygen
+
+ 
