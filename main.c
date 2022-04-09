@@ -5,7 +5,7 @@
 */
 
 #include <unistd.h>
-// #include <wait.h>
+#include <wait.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
