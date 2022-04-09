@@ -27,6 +27,22 @@
 
 #define LC_ASCII_MIN 97
 
+/*! \brief Преобразовывает число из унарной системы счисления в десятичную
+ *
+ * @param number число в унарной системе
+ * @return число в десятичной
+ */
+int unary_to_ten(char* number)
+{
+    unsigned long digits_count = strlen(number);
+    printf("%d\n",digits_count);
+    int count = 0;
+    for (int i = 0; i < strlen(number); i++)
+    {
+        count++;
+    }
+    return count;
+}
 /*! \brief Преобразовывает цифру в десятичную систему счисления
  *
  *

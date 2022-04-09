@@ -5,7 +5,7 @@
 */
 
 #include <unistd.h>
-#include <wait.h>
+// #include <wait.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -87,6 +87,10 @@ bool check_numeric(char digit, int base)
     {
         return true;
     }
+    else if (atoi(&digit) == 0 && base == 0)
+    {
+        return true;
+    }
     else
     {
         return false;
@@ -131,9 +135,13 @@ void validate_args(char* argv[])
     {
         base = num_base;
     }
+    else if (strcmp(argv[1], "u") == 0)
+    {
+        base = 0;
+    }
     else
     {
-        fprintf(stderr, "Поддерживаемая система счисления (аргумент 1)  от %d до %d\n",
+        fprintf(stderr, "Поддерживаемая система счисления (аргумент 1)  от %d до %d а так же u\n",
                 MIN_NUM_BASE, MAX_NUM_BASE);
         exit(EXIT_FAILURE);
     }

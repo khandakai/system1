@@ -34,4 +34,5 @@ char max_ch_in_base(int number_base);
 
 char* get_max_number(char* number, char* number_base);
 
+int unary_to_ten(char* number);
 #endif /*NUMWORK_H*/
