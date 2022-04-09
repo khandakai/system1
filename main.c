@@ -213,11 +213,11 @@ int main(int argc, char* argv[])
             validate_args(argv);
             pid_t pid;
             int exec_status;
+            printf("MAIN OUTPUT:: %s %s %s", argv[0], argv[1], argv[2]);
             switch (pid = fork()) {
                 case CHILD_FORK: {
                     char *p_num = delete_zeros(argv[2]);
                     //
-                    printf("MAIN OUTPUT:: %s %s %s %s", argv[0], argv[1], argv[2], p_num);
                     //
                     exec_status = execlp(CHILD_PROGRAM, PARENT_PROGRAM, argv[0], argv[1], p_num, NULL);
                     break;
