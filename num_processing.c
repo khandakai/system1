@@ -28,17 +28,17 @@ int main(int argc, char* argv[])
         if (strcmp(argv[2], "u") == 0)
         {
             printf(":: Режим унарной системы счисления ::\n");
-            printf("Это число в десятичной системе счисления : %d", unary_to_ten(argv[2]));
+            printf("Это число в десятичной системе счисления : %d", unary_to_ten(argv[3]));
         }
         else
         {
-            printf("\n[] Число: %s , система счисления: %s\n", argv[2], argv[1]);
-            int ten_based_number = number_to_ten_base(argv[2], argv[1]);
+            printf("\n[] Число: %s , система счисления: %s\n", argv[3], argv[2]);
+            int ten_based_number = number_to_ten_base(argv[3], argv[2]);
             printf("[] Это число в десятичной системе счисления: %d\n", ten_based_number);
-            char* p_addition = get_invert_sequence(argv[2], argv[1]);
-            printf("[] Инвертированная последовательность в системе счисления %s: %s \n", argv[1], p_addition);
-            printf("[] Инвертированная последовательность в 10-чной системе: %d\n", number_to_ten_base(p_addition, argv[1]));
-            printf("[] Дополненное число: %s\n", get_max_number(argv[2], argv[1]));
+            char* p_addition = get_invert_sequence(argv[3], argv[2]);
+            printf("[] Инвертированная последовательность в системе счисления %s: %s \n", argv[2], p_addition);
+            printf("[] Инвертированная последовательность в 10-чной системе: %d\n", number_to_ten_base(p_addition, argv[2]));
+            printf("[] Дополненное число: %s\n", get_max_number(argv[3], argv[2]));
         }
         return EXIT_SUCCESS;
     }

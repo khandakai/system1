@@ -213,7 +213,6 @@ int main(int argc, char* argv[])
             validate_args(argv);
             pid_t pid;
             int exec_status;
-            printf("MAIN OUTPUT:: %s %s %s", argv[0], argv[1], argv[2]);
             switch (pid = fork()) {
                 case CHILD_FORK: {
                     if (strcmp(argv[1], "u") != 0)
