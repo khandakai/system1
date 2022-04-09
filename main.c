@@ -216,9 +216,11 @@ int main(int argc, char* argv[])
             printf("MAIN OUTPUT:: %s %s %s", argv[0], argv[1], argv[2]);
             switch (pid = fork()) {
                 case CHILD_FORK: {
-                    char *p_num = delete_zeros(argv[2]);
-                    //
-                    //
+                    if (strcmp(argv[1], "u") != 0)
+                    {
+                        char *p_num = delete_zeros(argv[2]);
+                    }
+                    char *p_num = argv[2];
                     exec_status = execlp(CHILD_PROGRAM, PARENT_PROGRAM, argv[0], argv[1], p_num, NULL);
                     break;
                 }
