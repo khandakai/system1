@@ -34,8 +34,6 @@
  */
 int unary_to_ten(char* number)
 {
-    unsigned long digits_count = strlen(number);
-    printf("%d\n",digits_count);
     int count = 0;
     for (int i = 0; i < strlen(number); i++)
     {

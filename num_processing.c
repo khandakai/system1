@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
         if (strcmp(argv[2], "u") == 0)
         {
             printf(":: Режим унарной системы счисления ::\n");
-            printf("Это число в десятичной системе счисления : %d", unary_to_ten(argv[3]));
+            printf("Это число в десятичной системе счисления : %d\n", unary_to_ten(argv[3]));
         }
         else
         {
