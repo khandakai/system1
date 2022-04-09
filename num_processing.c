@@ -17,7 +17,6 @@
  */
 int main(int argc, char* argv[])
 {
-    printf("CHILD OUTPUT:: %s %s %s %s", argv[0], argv[1], argv[2], argv[3]);
     if (strcmp(argv[0], PARENT_PROGRAM) != 0)
     {
         printf("\nПрограмма запускается только из родительского процесса\n");
